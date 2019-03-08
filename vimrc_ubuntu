@@ -1,0 +1,35 @@
+"--- 基本設定 ---
+set fenc=utf-8 "文字コードをUTF-8に設定
+set tabstop=4
+set expandtab
+set autoindent 
+set smartindent
+set shiftwidth=4
+set number
+set wildmenu "コマンドモードの補完
+set autoread "編集中のファイルが変更されたら自動で読み直す
+set list listchars=tab:\>\- "タブなどの可視化
+"折り返し時に表示単位でカーソル移動
+nnoremap j gj
+nnoremap k gk
+
+
+"--- 検索設定 ---
+set hlsearch "検索語をハイライト
+set ignorecase "検索文字列が小文字の場合は大文字小文字を区別なく検索
+set smartcase "検索文字列に大文字が含まれる場合には区別して検索
+"esc連打でハイライト解除
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+
+"--- クリップボードの有効化 ---(ubuntu用)
+set clipboard=unnamedplus
+
+
+"--- その他の設定 ---
+set cursorline "現在の行を強調表示
+set cryptmethod=blowfish2 "暗号化アルゴリズムを変更
+"Ctrl + C で文字数カウント
+nmap <C-c> :%s/./&/g
+"プログラムに色をつける(Macだと必要)
+syntax on
