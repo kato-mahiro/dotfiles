@@ -28,14 +28,6 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 set clipboard=unnamedplus
 
 
-"--- その他の設定 ---
-set cursorline "現在の行を強調表示
-set cryptmethod=blowfish2 "暗号化アルゴリズムを変更
-"Ctrl + C で文字数カウント
-nmap <C-c> :%s/./&/g
-"プログラムに色をつける(Macだと必要)
-syntax on
-
 "--- ペースト時にインデントが崩れないようにする ---
 if &term =~ "xterm"
     let &t_ti .= "\e[?2004h"
@@ -52,3 +44,12 @@ if &term =~ "xterm"
     cnoremap <special> <Esc>[200~ <nop>
     cnoremap <special> <Esc>[201~ <nop>
 endif
+
+
+"--- その他の設定 ---
+set cursorline "現在の行を強調表示
+set cryptmethod=blowfish2 "暗号化アルゴリズムを変更
+"Ctrl + C で文字数カウント
+nmap <C-c> :%s/./&/g
+"プログラムに色をつける(Macだと必要)
+syntax on
