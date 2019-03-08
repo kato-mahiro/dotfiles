@@ -4,6 +4,8 @@ set tabstop=4
 set expandtab
 set autoindent 
 set smartindent
+" '#'で始まる行のインデントを保持する
+inoremap # X<C-H>#
 set shiftwidth=4
 set number
 set wildmenu "コマンドモードの補完
