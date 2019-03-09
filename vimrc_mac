@@ -7,10 +7,9 @@ set smartindent
 " '#'で始まる行のインデントを保持する
 inoremap # X<C-H>#
 set shiftwidth=4
-set number
 set wildmenu "コマンドモードの補完
 set autoread "編集中のファイルが変更されたら自動で読み直す
-set list listchars=tab:\>\- "タブなどの可視化
+set showcmd "入力中のコマンドをステータスに表示する
 "折り返し時に表示単位でカーソル移動
 nnoremap j gj
 nnoremap k gk
@@ -28,10 +27,17 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 set clipboard+=unnamed
 
 
-"--- その他の設定 ---
+"--- 見た目の設定 ---
+set laststatus=2 "ステータスラインを常に表示
+set showmatch "括弧入力時の対応する括弧を表示
+set number
+set list listchars=tab:\>\- "タブなどの可視化
 set cursorline "現在の行を強調表示
+"プログラムに色をつける(Macだと必要)
+syntax on
+
+
+"--- その他の設定 ---
 set cryptmethod=blowfish2 "暗号化アルゴリズムを変更
 "Ctrl + C で文字数カウント
 nmap <C-c> :%s/./&/g
-"プログラムに色をつける(Macだと必要)
-syntax on
