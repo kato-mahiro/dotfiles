@@ -13,6 +13,9 @@ set showcmd "入力中のコマンドをステータスに表示する
 "折り返し時に表示単位でカーソル移動
 nnoremap j gj
 nnoremap k gk
+"Ctrl + jを<esc>にする
+imap <C-j> <esc>
+noremap! <C-j> <esc>
 
 
 "--- 検索設定 ---
