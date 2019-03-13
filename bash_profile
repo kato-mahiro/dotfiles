@@ -44,6 +44,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias tree='tree -N'
+alias jupyter-notebook='cd ~/Dropbox/Jupyter-notebook && jupyter-notebook'
 
 # added by Anaconda3 2018.12 installer
 # >>> conda init >>>
