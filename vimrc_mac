@@ -44,3 +44,4 @@ syntax on
 set cryptmethod=blowfish2 "暗号化アルゴリズムを変更
 "Ctrl + C で文字数カウント
 nmap <C-c> :%s/./&/g
+set backspace=indent,eol,start
