@@ -45,4 +45,10 @@ alias la='ls -A'
 alias l='ls -CF'
 alias tree='tree -N'
 
+#Anacondaへのパスを有効に
 export PATH="/Users/katomasahiro/anaconda3/bin:$PATH"
+
+# 初回シェル時のみ tmux実行
+if [ $SHLVL = 1 ]; then
+  tmux
+fi
