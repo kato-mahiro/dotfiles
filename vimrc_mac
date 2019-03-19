@@ -13,13 +13,19 @@ set showcmd "入力中のコマンドをステータスに表示する
 "折り返し時に表示単位でカーソル移動
 nnoremap j gj
 nnoremap k gk
-"Ctrl + jを<esc>にする
+"Ctrl + jを<esc>にリマップ
 imap <C-j> <esc>
 noremap! <C-j> <esc>
-
 "jj,kkを<esc>にリマップ 
 inoremap <silent> jj <ESC>
 inoremap <silent> kk <ESC>
+"補完候補を自動表示 Tabで選択できるようにする
+set completeopt=menuone
+for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
+  exec "imap " . k . " " . k . "<C-N><C-P>"
+endfor
+imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
+
 
 "--- 検索設定 ---
 set hlsearch "検索語をハイライト
@@ -27,6 +33,7 @@ set ignorecase "検索文字列が小文字の場合は大文字小文字を区�
 set smartcase "検索文字列に大文字が含まれる場合には区別して検索
 "esc連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
 
 "--- クリップボードの有効化 ---(Mac用)
 set clipboard+=unnamed
