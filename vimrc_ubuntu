@@ -16,6 +16,15 @@ nnoremap k gk
 "Ctrl + jを<esc>にする
 imap <C-j> <esc>
 noremap! <C-j> <esc>
+"jj,kkを<esc>にリマップ 
+inoremap <silent> jj <ESC>
+inoremap <silent> kk <ESC>
+"補完候補を自動表示 Tabで選択できるようにする
+set completeopt=menuone
+for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
+  exec "imap " . k . " " . k . "<C-N><C-P>"
+endfor
+imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
 
 
 "--- 検索設定 ---
