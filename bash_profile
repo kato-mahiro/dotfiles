@@ -52,3 +52,7 @@ export PATH="/Users/katomasahiro/anaconda3/bin:$PATH"
 if [ $SHLVL = 1 ]; then
   tmux
 fi
+
+#.pythonrc.pyを自動読み込み
+PYTHONSTARTUP=$HOME/.pythonrc.py
+export PYTHONSTARTUP
