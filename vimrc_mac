@@ -43,7 +43,8 @@ set clipboard+=unnamed
 set laststatus=2 "ステータスラインを常に表示
 set showmatch "括弧入力時の対応する括弧を表示
 set number
-set list listchars=tab:\>\- "タブなどの可視化
+set list
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set cursorline "現在の行を強調表示
 "プログラムに色をつける(Macだと必要)
 syntax on
