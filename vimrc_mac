@@ -19,6 +19,9 @@ noremap! <C-j> <esc>
 "jj,kkを<esc>にリマップ 
 inoremap <silent> jj <ESC>
 inoremap <silent> kk <ESC>
+"Shift+j,kで高速移動
+nnoremap <S-j> 4j
+nnoremap <S-k> 4k
 "補完候補を自動表示 Tabで選択できるようにする
 set completeopt=menuone
 for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
