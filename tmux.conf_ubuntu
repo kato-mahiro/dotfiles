@@ -1,7 +1,7 @@
 set -sg escape-time 1
 
-bind - split-window -v
-bind | split-window -h
+bind '|' split-window -hc '#{pane_current_path}'
+bind '-' split-window -vc '#{pane_current_path}'
 
 bind h select-pane -L
 bind j select-pane -D
