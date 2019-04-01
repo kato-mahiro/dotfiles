@@ -13,12 +13,15 @@ set showcmd "入力中のコマンドをステータスに表示する
 "折り返し時に表示単位でカーソル移動
 nnoremap j gj
 nnoremap k gk
-"Ctrl + jを<esc>にする
+"Ctrl + jを<esc>にリマップ
 imap <C-j> <esc>
 noremap! <C-j> <esc>
 "jj,kkを<esc>にリマップ 
 inoremap <silent> jj <ESC>
 inoremap <silent> kk <ESC>
+"Shift+j,kで高速移動
+nnoremap <S-j> 4j
+nnoremap <S-k> 4k
 "補完候補を自動表示 Tabで選択できるようにする
 set completeopt=menuone
 for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
@@ -61,7 +64,8 @@ endif
 set laststatus=2 "ステータスラインを常に表示
 set showmatch "括弧入力時の対応する括弧を表示
 set number
-set list listchars=tab:\>\- "タブなどの可視化
+set list
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set cursorline "現在の行を強調表示
 "プログラムに色をつける(Macだと必要)
 syntax on
