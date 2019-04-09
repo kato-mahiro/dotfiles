@@ -1,4 +1,5 @@
 "--- 基本設定 ---
+set mouse=a
 set fenc=utf-8 "文字コードをUTF-8に設定
 set tabstop=4
 set expandtab
@@ -28,6 +29,11 @@ for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
   exec "imap " . k . " " . k . "<C-N><C-P>"
 endfor
 imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
+"ctrl-l,hでタブ移動
+map <C-l> gt
+map <C-h> gT
+":filerでファイラを開く
+:command Filer tabnew .
 
 
 "--- 検索設定 ---
