@@ -45,6 +45,8 @@ alias la='ls -A'
 alias l='ls -CF'
 alias tree='tree -N'
 
+alias dialy='/Users/katomasahiro/dialy/dialy.sh'
+
 #Anacondaへのパスを有効に
 export PATH="/Users/katomasahiro/anaconda3/bin:$PATH"
 
