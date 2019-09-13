@@ -55,7 +55,6 @@ set number
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set cursorline "現在の行を強調表示
-set cursorcolumn
 "プログラムに色をつける(Macだと必要)
 syntax on
 

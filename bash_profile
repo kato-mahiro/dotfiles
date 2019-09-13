@@ -44,6 +44,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias tree='tree -N'
+alias gs='git status'
+alias gd='git diff'
+alias gl='git log'
 
 alias dialy='/Users/katomasahiro/dialy/dialy.sh'
 
