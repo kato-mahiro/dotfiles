@@ -25,10 +25,7 @@ else
 fi
 
 #rmをゴミ箱に
-if [ -d ${HOME}/.Trash ]
-then
-    alias rm='mv --backup=numbered --target-directory=${HOME}/.Trash'
-fi
+alias rm='mv --backup=numbered --target-directory=${HOME}/.Trash'
 
 # 初回シェル時のみ tmux実行
 if [ $SHLVL = 1 ]; then
