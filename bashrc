@@ -31,3 +31,12 @@ alias rm='mv --backup=numbered --target-directory=${HOME}/.Trash'
 if [ $SHLVL = 1 ]; then
   tmux
 fi
+
+# tmuxと端末上でhistoryを共有する
+function share_history{
+    history -a
+    history -c
+    history -r
+}
+PROMPT_COMMAND='share_history'
+shopt -u histappend
