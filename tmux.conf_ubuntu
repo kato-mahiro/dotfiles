@@ -14,10 +14,11 @@ set -g pane-active-border-fg white
 set -g pane-active-border-bg yellow 
 
 # tmuxでクリップボードにコピーできるようにする(ubuntu用)
-# xselを使うのでapt-getしておく
-# "<prefix> [" でコピーモードに入る
+# xselを使うのでapt-getしておく ($sudo apt install xsel)
+# "<prefix> [" でコピーモードに入ることができ、vimのキー設定を用いてコピーした内容をクリップボードに送ることができる。
+# tmuxに貼り付けたいときは、Shiftを押しながらマウス中クリック
 set-window-option -g mode-keys vi
-#bind-key -t vi-copy v begin-selection
-#bind-key -t vi-copy C-v rectangle-toggle
-#bind-key -t vi-copy y copy-pipe "xsel -bi"
-#bind-key -t vi-copy Enter copy-pipe "xsel -bi"
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "xsel -bi"
+bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "xsel -bi"
