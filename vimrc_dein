@@ -59,12 +59,6 @@ for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
   exec "imap " . k . " " . k . "<C-N><C-P>"
 endfor
 
-"辞書ファイルを補完に用いる
-autocmd FileType python :set dictionary=~/dotfiles/python.dict
-autocmd FileType cpp :set dictionary=~/dotfiles/cpp.dict
-autocmd FileType c :set dictionary=~/dotfiles/c.dict
-set complete=.,w,b,u,t,i,k
-
 imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
 "ctrl-l,hでタブ移動
 map <C-l> gt
