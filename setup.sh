@@ -12,6 +12,8 @@ echo '#~~~~~~~~~~~~~~~~~ added by script ~~~~~~~~~~~~~~~~~~~' >> ~/.bashrc
 cat bashrc >> ~/.bashrc
 echo '#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~' >> ~/.bashrc
 mkdir ~/.Trash
+source ~/.bashrc
+echo ' ### .bashrcを設定しました ###'
 
 #tmuxの設定
 ln -s ./tmux.conf ~/.tmux.conf
@@ -20,5 +22,6 @@ ln -s ./tmux.conf ~/.tmux.conf
 git config --global user.email katomasahiro10@gmail.com
 git config --global user.name katomasahiro10
 git config --global core.editor vim
+echo '### git config を設定しました ###'
 
 echo ' ### 設定が完了しました ### '
