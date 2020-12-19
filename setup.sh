@@ -1,7 +1,7 @@
 if [ $1 = pure ]; then
-    ln -s ./vimrc_pure ~/.vimrc
+    ln -s ~/dotfiles/vimrc_pure ~/.vimrc
 elif [ $1 = dein ]; then
-    ln -s ./vimrc_dein ~/.vimrc
+    ln -s ~/dotfiles/vimrc_dein ~/.vimrc
 else
     echo "引数にはpure か deinを指定すること"
     exit
