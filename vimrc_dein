@@ -19,6 +19,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('kannokanno/previm') "mdをブラウザでリアルタイム表示
     call dein#add('tyru/open-browser.vim')
     call dein#add('preservim/nerdtree')
+    call dein#add('nathanaelkane/vim-indent-guides')
   endif
 
   call dein#end()
@@ -27,6 +28,16 @@ endif
 
 filetype plugin indent on
 syntax enable
+
+"NERDTreeの設定
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+"vim-indent-guidesの設定
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+
 
 "--- 基本設定 ---
 set mouse=a
@@ -114,5 +125,3 @@ set cryptmethod=blowfish2 "暗号化アルゴリズムを変更
 "Ctrl + C で文字数カウント
 nmap <C-c> :%s/./&/g
 
-"NERDTreeの設定
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
