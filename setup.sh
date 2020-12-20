@@ -16,7 +16,8 @@ source ~/.bashrc
 echo ' ### .bashrcを設定しました ###'
 
 #tmuxの設定
-ln -s ./tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+tmux source ~/.tmux.conf
 
 #gitの設定
 git config --global user.email katomasahiro10@gmail.com
