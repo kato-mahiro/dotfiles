@@ -31,3 +31,15 @@ alias rm='mv --backup=numbered --target-directory=${HOME}/.Trash'
 if [ $SHLVL = 1 ]; then
   tmux
 fi
+
+# ggコマンドでgoogle検索
+function gg() {
+    tr=""
+    for i in $* ;do
+        s=`echo "$i"|sed -e "s/\+/%2B/g"`
+        s=`echo "$s"|sed -e "s/\&/%26/g"`
+        str="${str}+${s}"
+    done
+    w3m google.net/search?q=$str; str=""
+}
+alias gg=gg
