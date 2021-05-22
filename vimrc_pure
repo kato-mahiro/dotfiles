@@ -5,6 +5,9 @@ set tabstop=4
 set expandtab
 set autoindent 
 set smartindent
+set fileformats=unix,dos,mac
+set fileencodings=utf-8,sjis
+
 " '#'で始まる行のインデントを保持する
 inoremap # X<C-H>#
 set shiftwidth=4
@@ -47,7 +50,8 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 
 "--- クリップボードの有効化 ---(ubuntu用)
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
+set clipboard+=unnamed
 
 
 "--- ペースト時にインデントが崩れないようにする ---
@@ -77,6 +81,9 @@ set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set cursorline "現在の行を強調表示
 "プログラムに色をつける(Macだと必要)
 syntax on
+
+"タグサーチ用
+set tags=.tags;$HOME
 
 
 "--- その他の設定 ---

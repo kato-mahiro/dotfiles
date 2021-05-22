@@ -88,7 +88,8 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 
 "--- クリップボードの有効化 ---(ubuntu用)
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
+set clipboard+=unnamed
 
 
 "--- ペースト時にインデントが崩れないようにする ---
